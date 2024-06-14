@@ -3,7 +3,7 @@ from pegar_moedas import nomes_moedas, dic_conversoes_disponiveis
 from pegar_cotacao import pegar_cotacao_moeda
 #criar e configurar a janela 
 customtkinter.set_appearance_mode("dark")
-customtkinter.set_default_color_theme("dark-blue")
+customtkinter.set_default_color_theme("blue")
 
 
 janela = customtkinter.CTk()
@@ -34,7 +34,7 @@ def converter_moeda():
 
     cotacao = pegar_cotacao_moeda(moeda_origem, moeda_destino)
     texto_cotacao_moeda.configure(text=f"1{moeda_origem} = {cotacao}  {moeda_destino}")
-botao_converter = customtkinter.CTkButton(janela, text="Converter", command= converter_moeda)
+botao_converter = customtkinter.CTkButton(janela, text="Converter", command= converter_moeda,)
 
 listas_moedas = customtkinter.CTkScrollableFrame(janela)
 
