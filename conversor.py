@@ -3,14 +3,15 @@ from pegar_moedas import nomes_moedas, dic_conversoes_disponiveis
 from pegar_cotacao import pegar_cotacao_moeda
 #criar e configurar a janela 
 customtkinter.set_appearance_mode("dark")
-customtkinter.set_default_color_theme("blue")
+customtkinter.set_default_color_theme("green")
 
 
 janela = customtkinter.CTk()
 janela.geometry("500x500")
 
 conversoes_diponiveis = dic_conversoes_disponiveis()
-
+janela.iconbitmap("icon_conversor.ico")
+janela.title("Converter JRZ")
 #Criar Botão, Textos e elelmentos 
 
 titulo = customtkinter.CTkLabel(janela, text = "Conversor de Moedas")
